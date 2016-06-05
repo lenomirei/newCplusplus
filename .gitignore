@@ -1,0 +1,53 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+Debug
+.vs
+11月8号上午卷子编程题目
+.vs
+*.sdf
+*.sln
+*.vcxproj
+*.filters
+*.Compress
+*.txtconfig
+*.txtfinal
+*.txt
+*.dsw
+*.ncb
+*.opt
+*.plg
+*.sdf
+*.sln
+*.suo
+*.vcxproj
+*.filters
+*.user
+*.suo
+ipch
+*.cd
