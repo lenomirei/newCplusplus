@@ -51,3 +51,5 @@ Debug
 *.suo
 ipch
 *.cd
+*.db
+*.db
