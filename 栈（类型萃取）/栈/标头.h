@@ -60,13 +60,17 @@ public:
 		, size(0)
 		, capacity(0)
 	{}
-	//Stack(T* a)
-	//	:array(a)
-	//	,size(sizeof(a)/sizeof(T))
-	//	,capacity(size)e
-	//{
-
-	//}这个函数是有错误的
+	Stack(T* a)
+	    :size(sizeof(a)/sizeof(T))
+		,capacity(size)e
+	{
+		array = new T[size];
+		for (int i = 0; i < size; ++i)
+		{
+			array[i] = a[i];
+		}
+	}
+//这个函数是有错误的
 	//深浅拷贝问题
 	Stack(const Stack<T,n>& s)
 		:array(NULL)
