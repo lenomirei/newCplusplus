@@ -41,7 +41,7 @@ void TestCountSort()
 }
 
 
-int GetMaxDigit(int *a,size_t size)
+int GetMaxDigit(int *a,size_t size)//该函数的作用是获取这些数中最大的数的位数
 {
 	int digit = 1;
 	int max = 10;
@@ -59,8 +59,8 @@ int GetMaxDigit(int *a,size_t size)
 //一共需要几个数组呢？一个count,一个start还有一个收集用的暂存数组？最后拷贝回去就可以了！
 void DigitSort(int *a, size_t size)
 {
-	int MaxDigit = GetMaxDigit(a, size);
-	int curDigit = 1;
+	int MaxDigit = GetMaxDigit(a, size);//获得最多几位数
+	int curDigit = 1;//当前进行比较的位数
 	int digit = 0;
 	int Count[10];
 	int Start[10];

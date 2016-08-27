@@ -1,25 +1,24 @@
 #include <iostream>
 #include <mutex>
+#include<windows.h>
 using namespace std;
 
-mutex mx;
 
 class Singleton
 {
 public:
 	static Singleton *GetObject()
 	{
-		if (NULL == s);
+		if (NULL == s)
 		{
-			mx.lock();
-			template<mutex>lock_guard(mx);
+			lock_guard<mutex> lock(mx);
 			if (NULL == s)
 			{
 				//return new Singleton();
 				Singleton *tmp = new Singleton();
 				MemoryBarrier();
+				s = tmp;
 			}
-			mx.unlock();
 		}
 		return s;
 	}
@@ -29,14 +28,18 @@ public:
 	}
 private:
 	int _data;
+	static mutex mx;
 	static Singleton *s;
 	Singleton()
 		:_data(0)
 	{}
-	Singleton(Singleton &);
-	Singleton &operator=(Singleton &);
+	Singleton(Singleton &) 
+	{}
+	Singleton &operator=(Singleton &) 
+	{}
 };
-
+mutex Singleton::mx;
+Singleton *Singleton::s = NULL;
 
 int main()
 {

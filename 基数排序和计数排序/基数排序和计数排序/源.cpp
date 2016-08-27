@@ -3,7 +3,7 @@
 
 int main()
 {
-	TestCountSort();
-	//TestDigitSort();
+	//TestCountSort();
+	TestDigitSort();
 	return 0;
 }
